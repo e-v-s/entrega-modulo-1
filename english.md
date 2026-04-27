@@ -114,7 +114,7 @@ It was also found that devices, even when on different networks, communicate wit
 
 The scan result returned six IP addresses (each one a device), as shown below.
 
-
+![](https://github.com/e-v-s/entrega-modulo-1/blob/main/03.png)
 
 ### List of devices found on the network:
 
