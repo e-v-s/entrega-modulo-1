@@ -125,3 +125,34 @@ The scan result returned six IP addresses (each one a device), as shown below.
 - `10.10.30.117` - Zabbix Server
 - `10.10.30.227` - Legacy Server
 
+From the device names, we can see that on the infra_net network there are several servers running. When scanning for ports and services using the Rustscan tool, we verified which ports were open and confirmed the services.
+
+Below is evidence of the beginning of the scan, showing the IPs and their respective open ports.
+
+![](https://github.com/e-v-s/entrega-modulo-1/blob/main/04.png)
+
+Continuing with the scan, we have confirmation of the services as well as the machine OS (Linux – ttl 64). Screenshots of each IP with port, service, and OS can be found in the appendix (Figures 4, 5, 6, and 7). On the next page is a table containing the scan information.
+
+| HOST/IP | SERVICE | PORT | VERSION |
+|---------|---------|------|---------|
+| 10.10.30.10 | ftp | 21/tcp | Pure-FTPd |
+| 10.10.30.11 | mysql | 3306/tcp | MySQL 8.0.42 |
+| | mysqlx | 33060/tcp | |
+| 10.10.30.15 | netbios-ssn | 139/tcp | Samba 4 |
+| | netbios-ssn | 445/tcp | Samba 4 |
+| 10.10.30.17 | ldap | 389/tcp | OpenLDAP 2.2.x – 2.3.x |
+| | ldapssl? | 636/tcp | |
+| 10.10.30.117 | http | 80/tcp | Nginx – Zabbix |
+| | ssl/zabbix-trapper? | 10051/tcp | |
+| | unknown | 10052/tcp | |
+
+## 2.1 Risk on the MySQL Server
+
+Several login attempts were made, and it was found that the `root` user has the same login and password. This user has all possible privileges on the database (Figure 9). These factors make this vulnerability an extremely high risk: the likelihood of exploitation is extremely high, and the impact could be devastating for the company with respect to the CIA triad and compliance.
+
+![Login to the MySQL server with matching username and password.](https://github.com/e-v-s/entrega-modulo-1/blob/main/05.png)
+
+![Root user privileges.](https://github.com/e-v-s/entrega-modulo-1/blob/main/06.png)
+
+The users with access to the database were also listed below, and using the user's privileges, a new user "hacker" was created with full privileges, as shown in the following pictures.
+
