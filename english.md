@@ -92,7 +92,7 @@ The results of the `ifconfig` command show three networks:
 - `10.10.10.0/24` – corp_net
 - `10.10.50.0/24` – guest_net
 
-![Figure 1 - Results of the `ifconfig` command on the "analyst" machine](https://github.com/e-v-s/entrega-modulo-1/blob/main/01.png)
+![Results of the `ifconfig` command on the "analyst" machine](https://github.com/e-v-s/entrega-modulo-1/blob/main/01.png)
 
 It was also found that devices, even when on different networks, communicate with each other. This is a serious problem.
 
@@ -112,5 +112,16 @@ It was also found that devices, even when on different networks, communicate wit
 
 ## 2 Network 10.10.30.0/24 – infra_net
 
-The scan result returned six IP addresses (each one a device), as shown in Figure 2 below.
+The scan result returned six IP addresses (each one a device), as shown below.
+
+
+
+### List of devices found on the network:
+
+- `10.10.30.10` - FTP Server
+- `10.10.30.11` - MySQL Server
+- `10.10.30.15` - Samba Server
+- `10.10.30.17` - OpenLDAP
+- `10.10.30.117` - Zabbix Server
+- `10.10.30.227` - Legacy Server
 
