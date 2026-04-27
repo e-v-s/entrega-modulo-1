@@ -92,5 +92,25 @@ The results of the `ifconfig` command show three networks:
 - `10.10.10.0/24` – corp_net
 - `10.10.50.0/24` – guest_net
 
+![Figure 1 - Results of the `ifconfig` command on the "analyst" machine](https://github.com/e-v-s/entrega-modulo-1/blob/main/01.png)
 
+It was also found that devices, even when on different networks, communicate with each other. This is a serious problem.
+
+## 1.1 Network Diagram
+
+![](https://github.com/e-v-s/entrega-modulo-1/blob/main/02.png)
+
+### 1.1.1 Risks
+
+- Devices communicate with each other, even when on different networks.
+- There is no DMZ for servers with external contact.
+- The monitoring server should be isolated.
+- The legacy server should be isolated.
+- The corporate network should be an internal network (10.10.10.0/24).
+- The guest network should be an external network (10.10.50.0/24).
+- The ability to ping using the method described in the methodology proves that the network does not go through firewalls.
+
+## 2 Network 10.10.30.0/24 – infra_net
+
+The scan result returned six IP addresses (each one a device), as shown in Figure 2 below.
 
