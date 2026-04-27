@@ -82,3 +82,15 @@ The following assets were inventoried:
 | 10.10.30.0/24 | 10.10.30.10<br>10.10.30.11<br>10.10.30.15<br>10.10.30.17<br>10.10.30.117<br>10.10.30.227<br>10.10.30.2 | 7A:28:B1:0F:C7:35<br>5A:3C:C8:CC:8B:84<br>6A:75:46:80:C0:1E<br>1E:9D:EC:AB:BD:D7<br>EA:3B:D2:C5:BD:0F<br>06:DA:AD:F0:BB:94<br> | FTP Server<br>MySQL Server<br>Samba Server<br>OpenLDAP Server<br>Zabbix Server<br>Legacy Server<br> |
 | 10.10.10.0/24 | 10.10.10.10<br>10.10.10.101<br>10.10.10.127<br>10.10.10.222<br>10.10.10.2 | FE:76:D9:6A:2F:B0<br>8E:B6:4E:86:DB:B4<br>EA:5A:DE:86:5F:70<br>AE:4F:64:D2:F3:AF<br> | WS_001<br>WS_002<br>WS_003<br>WS_004<br> |
 | 10.10.50.0/24 | 10.10.50.2<br>10.10.50.3<br>10.10.50.4<br>10.10.50.5<br>10.10.50.6 | 7E:00:91:09:DC:0C<br>66:7F:CD:DB:04:E5<br>C6:31:AB:FC:8D:BD<br>52:2E:B9:14:B6:C9<br> | laptop-vastro<br>macbook-aline<br>laptop-carlos<br>laptop-luiz<br> |
+
+# Findings and Evidence
+
+## 1 Network
+
+The results of the `ifconfig` command show three networks:
+- `10.10.30.0/24` – infra_net
+- `10.10.10.0/24` – corp_net
+- `10.10.50.0/24` – guest_net
+
+
+
